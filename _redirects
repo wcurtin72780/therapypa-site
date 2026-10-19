@@ -1,0 +1,6 @@
+# therapypa.com redirects (Cloudflare Pages _redirects format)
+# Staged 2026-10-17 for the Sunday Oct 18 8:00 PM ET deploy hour — Bill's approval.
+# The Pittsburgh page was removed 2026-10-13 (5-county seal strategy); it 404s
+# and still drew 18 pageviews Oct 10-17. Redirect catches stragglers to the homepage.
+/pittsburgh / 301
+/pittsburgh/* / 301
