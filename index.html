@@ -1,15 +1,168 @@
 <!doctype html>
 <!-- auto-deploy: github -> cloudflare pages -->
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="canonical" href="https://therapypa.com/"><title>TherapyPA | William Curtin, LCSW · Online therapy in Pennsylvania</title><meta name="description" content="Online therapy for adults in Pennsylvania with William Curtin, LCSW. Secure telehealth, free 20-minute consultation. Now credentialing with IBX.">
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<meta name="description" content="Virtual therapy in Pennsylvania for grief, anxiety, and high-achiever burnout with William Curtin, LCSW, TherapyPA in Philadelphia. Free 20-minute consultation. Independence Blue Cross (IBX) credentialing in progress." />
+<link rel="canonical" href="https://therapypa.com/" />
 <meta property="og:type" content="website">
 <meta property="og:title" content="TherapyPA | William Curtin, LCSW · Online therapy in Pennsylvania">
-<meta property="og:description" content="Online therapy for adults in Pennsylvania with William Curtin, LCSW. Secure telehealth, free 20-minute consultation. Now credentialing with IBX.">
+<meta property="og:description" content="Virtual therapy in Pennsylvania for grief, anxiety, and high-achiever burnout with William Curtin, LCSW, TherapyPA in Philadelphia. Free 20-minute consultation. Independence Blue Cross (IBX) credentialing in progress.">
 <meta property="og:url" content="https://therapypa.com/">
 <meta property="og:image" content="https://therapypa.com/assets/portrait.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TherapyPA | William Curtin, LCSW · Online therapy in Pennsylvania">
-<meta name="twitter:description" content="Online therapy for adults in Pennsylvania with William Curtin, LCSW. Secure telehealth, free 20-minute consultation. Now credentialing with IBX.">
-<meta name="twitter:image" content="https://therapypa.com/assets/portrait.jpeg"><link rel="stylesheet" href="style.css"><script type="application/ld+json">
+<meta name="twitter:description" content="Virtual therapy in Pennsylvania for grief, anxiety, and high-achiever burnout with William Curtin, LCSW, TherapyPA in Philadelphia. Free 20-minute consultation. Independence Blue Cross (IBX) credentialing in progress.">
+<meta name="twitter:image" content="https://therapypa.com/assets/portrait.jpeg">
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<title>TherapyPA | William Curtin, LCSW · Online therapy in Pennsylvania</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#2e7d64;
+    --green-dark:#256552;
+    --green-hero:#3f9e78;
+    --slate:#546a76;
+    --slate-dark:#43565f;
+    --slate-deep:#3d4f57;
+    --ink:#26312f;
+    --body:#3d4a47;
+    --muted:#6e7f7a;
+    --line:#e3e8e5;
+    --paper:#ffffff;
+    --wash:#f3f6f4;
+    --chip:#6b828d;
+    --serif:"Lora", Georgia, "Times New Roman", serif;
+    --sans:"Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);color:var(--body);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--green);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1,h2,h3{font-family:var(--serif);color:var(--ink);font-weight:500;margin:0}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:680px;margin:0 auto;padding:0 24px;text-align:center}
+
+  /* Test banner */
+  
+  
+  
+
+  /* Header — Fraser style: centered mark, name, contact line */
+  header.site{padding:44px 24px 0;text-align:center;background:var(--paper)}
+  .chairs{width:118px;height:auto;display:block;margin:0 auto 10px}
+  .brandmark{width:230px;max-width:72vw;height:auto;display:block;margin:0 auto 12px;mix-blend-mode:multiply}
+  .name{font-family:var(--serif);font-size:26px;color:var(--ink);letter-spacing:.01em}
+  .contactline{margin-top:6px;font-size:15.5px;color:var(--muted);display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap}
+  .contactline .dot{color:#b9c6c1;font-size:11px}
+  .contactline a{font-weight:600}
+  .mail-ic{width:17px;height:17px;vertical-align:-3px;fill:none;stroke:var(--green);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+
+  /* Nav */
+  nav.main{margin-top:30px;border-bottom:1px solid transparent}
+  nav.main ul{list-style:none;margin:0;padding:0;display:flex;justify-content:center;gap:44px}
+  nav.main a{display:block;padding:10px 2px 14px;color:var(--ink);font-size:16px;border-bottom:2px solid transparent}
+  nav.main a:hover{text-decoration:none;color:var(--green)}
+  nav.main a.active{color:var(--green);border-bottom-color:var(--green)}
+
+  /* Compact sticky header (appears on scroll, like Fraser's inner pages) */
+  .compact{position:fixed;inset:0 0 auto 0;background:var(--paper);box-shadow:0 1px 0 var(--line),0 6px 18px rgba(38,49,47,.06);z-index:50;transform:translateY(-110%);transition:transform .25s ease}
+  .compact.show{transform:translateY(0)}
+  .compact .row{max-width:1180px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:16px}
+  .compact .chairs{width:52px;margin:0}
+  .compact .cname{font-family:var(--serif);font-size:19px;color:var(--ink);line-height:1.15}
+  .compact .csub{font-size:13.5px;color:var(--muted)}
+  .compact .csub a{font-weight:600}
+  .compact nav{margin-left:auto;display:flex;gap:26px;align-items:center}
+  .compact nav a{color:var(--ink);font-size:15px}
+  .compact nav a.active{color:var(--green)}
+  .btn{display:inline-block;background:var(--slate);color:#fff;font-weight:700;font-size:15.5px;padding:13px 34px;border:0;cursor:pointer;font-family:var(--sans);letter-spacing:.01em}
+  .btn:hover{background:var(--slate-dark);text-decoration:none;color:#fff}
+  .btn.small{padding:9px 22px;font-size:14.5px}
+  @media(max-width:760px){.compact nav a{display:none}.compact nav a.btn{display:inline-block}}
+
+  /* Hero — full-bleed green block */
+  .hero{background-color:var(--green-hero);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cpath d='M0 14 Q7 6 14 14 T28 14 T42 14 T56 14' fill='none' stroke='%23ffffff' stroke-opacity='0.10' stroke-width='2'/%3E%3C/svg%3E");color:#fff;text-align:center;padding:96px 24px 104px}
+  .hero h1{color:#fff;font-size:clamp(36px,5.4vw,56px);line-height:1.15;font-weight:500;max-width:760px;margin:0 auto 26px}
+  .hero p{max-width:660px;margin:0 auto;font-size:clamp(17.5px,2.2vw,20.5px);line-height:1.65;color:#eef5f1}
+  .hero p + p{margin-top:14px}
+  .hero .btn{margin-top:44px;min-width:300px}
+  .hero .note{margin-top:18px;font-size:14.5px;color:#e9f5ee;letter-spacing:.02em}
+
+  /* Trust badges */
+  .badges{padding:64px 24px 8px}
+  .badges .grid{max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:center}
+  .badge svg{width:52px;height:52px;stroke:var(--slate);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+  .badge p{margin:0;font-weight:700;color:var(--ink);font-size:16.5px;line-height:1.35}
+  @media(max-width:700px){.badges .grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* Sections */
+  section{scroll-margin-top:96px}
+  .label{text-align:center;text-transform:uppercase;letter-spacing:.22em;font-size:12.5px;font-weight:700;color:#a3b3ad;margin:0 0 14px}
+  .about{padding:84px 0 90px}
+  .about h2,.location h2{font-size:clamp(32px,4.6vw,48px);text-align:center;line-height:1.2;margin-bottom:34px}
+  .about .narrow p{font-size:17.5px;line-height:1.75;margin:0 0 22px}
+  .portrait{margin:52px auto 0;text-align:center}
+  .headshot{width:172px;height:172px;border-radius:50%;margin:0 auto 16px;display:block;object-fit:cover;object-position:50% 18%;border:3px solid #fff;box-shadow:0 0 0 1px var(--line),0 10px 28px rgba(38,49,47,.14);background:var(--wash)}
+  .portrait .pname{font-size:17px;color:var(--ink)}
+  .portrait .pcred{color:#7d9b91;font-size:15.5px;margin-top:2px}
+
+  /* Services — slate block */
+  .services{background:var(--slate);color:#e8eef0;padding:26px 24px 84px;text-align:center}
+  .tags{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:880px;margin:0 auto 58px}
+  .tag{background:var(--chip);color:#fff;border:0;font-family:var(--sans);font-size:16.5px;padding:9px 26px;cursor:pointer;transition:background .15s ease}
+  .tag:hover{background:#7d97a2}
+  .tag[aria-pressed="true"]{background:#fff;color:var(--slate-dark);font-weight:700}
+  .spec-panel{max-width:620px;margin:-34px auto 54px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:22px 28px;font-size:16.5px;line-height:1.65;color:#eef3f4}
+  .spec-panel[hidden]{display:none}
+  .services .label{color:#b9c8cd;text-align:left}
+  .approaches{max-width:400px;margin:0 auto;text-align:left}
+  .approaches h3{color:#fff;font-family:var(--sans);font-weight:400}
+  .approaches ul{list-style:none;margin:18px 0 0;padding:0}
+  .approaches li{font-size:18.5px;padding:7px 0;color:#f2f6f7}
+
+  /* Location */
+  .location{background:var(--wash);padding:84px 24px 96px;text-align:center}
+  .loc-grid{max-width:820px;margin:44px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:36px;text-align:left;align-items:start}
+  @media(max-width:700px){.loc-grid{grid-template-columns:1fr}}
+  .loc-card{background:#fff;border:1px solid var(--line);padding:28px 30px}
+  .loc-card h3{font-family:var(--sans);font-weight:700;font-size:17px;margin-bottom:10px}
+  .loc-card p{margin:0 0 10px;font-size:16px;line-height:1.6}
+  .counties{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .counties span,.counties a{border:1px solid #c4d4cd;color:var(--green-dark);font-size:14px;padding:4px 12px;border-radius:999px;background:#fbfdfc}
+.counties a:hover{text-decoration:none;border-color:var(--green);color:var(--green)}
+
+  /* Getting started */
+  .start{padding:88px 24px 76px;text-align:center}
+  .start p{max-width:600px;margin:0 auto 8px;font-size:17.5px;line-height:1.7}
+  .start .btn{margin-top:30px;min-width:300px}
+  .calendly-wrap{max-width:860px;margin:38px auto 0;border:1px solid var(--line);background:#fff;box-shadow:0 10px 34px rgba(38,49,47,.07);overflow:hidden}
+  .cal-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 22px;border-bottom:1px solid var(--line);background:var(--wash);text-align:left}
+  .cal-bar-text{font-size:15.5px;color:var(--body);line-height:1.45}
+  .cal-bar-text strong{color:var(--ink)}
+  .cal-bar .btn{white-space:nowrap}
+  .cal-frame{display:block;width:100%;height:700px;border:0;background:#fff}
+  @media(max-width:700px){.cal-frame{height:760px}.cal-bar{justify-content:center;text-align:center}}
+  .ibx-note{margin:34px auto 0;font-size:13.5px;line-height:1.6;color:#8a9a94;max-width:560px}
+
+  /* Footer */
+  footer{background:var(--slate);color:#d7e0e3;padding:64px 24px 34px}
+  .foot-grid{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1px 1fr;gap:40px}
+  @media(max-width:700px){.foot-grid{grid-template-columns:1fr}.foot-grid .divider{display:none}}
+  .foot-grid .divider{background:rgba(255,255,255,.25)}
+  footer h4{margin:0 0 12px;color:#fff;font-size:16.5px;font-family:var(--sans)}
+  footer p{margin:0 0 8px;font-size:15.5px}
+  footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  .emergency{max-width:1060px;margin:52px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);text-align:center;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:#b9c8cd;line-height:1.7}
+</style>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -33,7 +186,7 @@
       "about": {
         "@id": "https://therapypa.com/#bill-curtin"
       },
-      "description": "Online therapy for adults in Pennsylvania with William Curtin, LCSW. Secure telehealth, free 20-minute consultation. Now credentialing with IBX."
+      "description": "Virtual therapy in Pennsylvania for grief, anxiety, and high-achiever burnout with William Curtin, LCSW, TherapyPA in Philadelphia. Free 20-minute consultation. Independence Blue Cross (IBX) credentialing in progress."
     },
     {
       "@type": "Person",
@@ -57,7 +210,7 @@
         "First responder mental health",
         "PTSD and trauma"
       ],
-      "description": "Licensed clinical social worker based in Philadelphia, providing online therapy for adults in Pennsylvania. Now credentialing with Independence Blue Cross (IBX)."
+      "description": "Licensed clinical social worker based in Philadelphia, providing online therapy for adults in Pennsylvania. Independence Blue Cross (IBX) credentialing in progress."
     },
     {
       "@type": "ProfessionalService",
@@ -73,85 +226,231 @@
         "https://www.linkedin.com/in/william-curtin-lcsw/",
         "https://www.therapyden.com/therapist/william-curtin"
       ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://therapypa.com/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is your psychotherapy fee?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "For self-pay, it is $200 per session. Payment is by credit or debit card through the secure client portal, or by Venmo. Depending on availability, I may be able to offer a reduced fee based on financial need."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer a free consultation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. A free 20-minute consultation so we can see if we’re a good fit. We’ll talk about what brings you in, any questions you have, and what working together would look like."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where and how do sessions happen?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All sessions are held online through secure telehealth, for adults located in Pennsylvania."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you take insurance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not yet. I am currently credentialing with Independence Blue Cross (IBX) for in-network therapy. Until credentialing clears, sessions are private pay. I provide superbills (a detailed receipt) you can submit to your insurer for out-of-network reimbursement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does a superbill work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You pay me directly. I provide a superbill on request. You submit it to your insurance company. Your insurance may reimburse part of the cost."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How will I know if my insurance takes superbills?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You will have to call your insurance company and ask the following questions: Do I have out-of-network mental health benefits? Is prior authorization required? Do I need to pay an annual deductible first? What is the reimbursement rate? Are there any session limits per year? What information is needed on the superbill? How do I submit the superbill (online, mail, app)? How long does it take to be reimbursed?"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need a referral or preauthorization?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. For routine outpatient therapy with IBX plans, no referral or preauthorization is needed. I verify your benefits before we begin so there are no surprises."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the first session like?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We’ll talk about what brings you in, what you want to be different, and how we might work together. There’s no pressure to have it all figured out. Beginning where you are is the whole point."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is your cancellation policy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Please give at least 24 hours’ notice if you need to cancel or reschedule. Late cancellations and missed sessions are charged the full fee, except in true emergencies."
-          }
-        }
-      ]
     }
   ]
 }
-</script></head><body><a class="skip" href="#main">Skip to content</a><header><a href="#" class="brand" aria-label="TherapyPA home"><span class="logo"><img src="assets/logo.jpeg" alt="TherapyPA logo"></span></a><nav aria-label="Main navigation"><a href="#approach">My approach</a><a href="#work">Who I help</a><a href="#about">About William</a><a href="#faq">FAQ</a><a class="nav-cta" href="#start">Getting started</a></nav></header><main id="main"><section class="questions" aria-label="Questions people bring to therapy"><p>Grief that will not settle?</p><p>Work that looks fine from the outside and feels empty inside?</p><p>Thoughts that will not quiet down?</p><p class="questions-close">You do not need the right words yet. We can start with what is bringing you in.</p></section><section class="hero"><div class="intro"><p class="eyebrow">William Curtin, LCSW · Virtual therapy in Pennsylvania</p><h1>When coping isn’t enough.<br><em>Time to understand what’s underneath.</em></h1><p class="lead">Maybe something hurts, something’s stuck, or life just feels difficult.</p><a class="button" href="https://calendly.com/bill-therapypa/20min" target="_blank" rel="noopener">Request a free 20-minute consultation <span aria-hidden="true">↗</span></a><p class="small">Free 20-minute consultation · Online therapy for adults in Pennsylvania.</p><p class="small">Now credentialing with Independence Blue Cross (IBX). Have an IBX plan? Book a free consultation and mention IBX to join the waitlist.</p></div><figure><img src="assets/portrait.jpeg" alt="William Curtin, licensed clinical social worker"><figcaption>A place for curiosity, understanding, and change.</figcaption></figure></section><section class="opening"><p class="eyebrow">Beginning where you are</p><h2>You don’t need to have<br>it all figured out.</h2><div><p>You may be considering therapy because of a specific concern, a difficult transition, or a pattern you feel ready to change. We can begin with what is troubling you now, while making room to explore the experiences, relationships, and feelings that shape your life.</p><p>Together, we can work toward greater self-understanding, more freedom in how you respond to familiar challenges, and a clearer sense of what makes life meaningful to you.</p></div></section><section id="approach" class="approach"><p class="eyebrow">My approach</p><h2>Practical help.<br>Deeper understanding.</h2><div class="columns"><article><span class="number">01</span><h3>Understanding your patterns</h3><p>My foundation is psychodynamic therapy. We explore how your experiences and relationships shape the ways you feel, connect, and respond today, with curiosity about patterns that may be difficult to see on your own.</p></article><article><span class="number">02</span><h3>Working with the present</h3><p>I also draw on my training in cognitive behavioral therapy, or CBT. Practical tools can help us examine thoughts and behaviors and work with the concerns that brought you to therapy.</p></article><article><span class="number">03</span><h3>Finding what matters to you</h3><p>Alongside addressing immediate difficulties, there is space to explore meaning, relationships, and the choices that could help you live more fully. Your priorities help guide our work.</p></article></div></section><section id="work" class="specialties"><p class="eyebrow">Areas of support</p><h2>You don’t have to<br>carry it alone.</h2><div class="columns"><article><h3>Traumatic grief</h3><p>When loss comes with trauma (a sudden death, a violent loss, grief tangled up with what happened), the mourning needs room, and so does the shock. I work with people carrying both.</p></article><article><h3>High-achiever burnout</h3><p>From the outside it looks like success. Inside it feels like running on empty with no permission to stop. I work with high achievers who are burning out and want a different relationship with work, ambition, and rest.</p></article><article><h3>Men’s mental health</h3><p>A lot of men were never given much language for what’s happening inside. Therapy can be a place to build that language, without judgment and without having to perform being fine.</p></article><article><h3>First responders</h3><p>Police, fire, EMS, dispatch: the job asks you to absorb what most people never see. I spent a decade in the victim services field and community behavioral health. I understand the culture and the cost.</p></article><article><h3>Anxiety &amp; depression</h3><p>Racing thoughts, dread that won’t lift, the flat gray of depression. Practical tools and deeper understanding, together. Not one or the other.</p></article><article><h3>PTSD &amp; trauma</h3><p>Trauma-informed care including Cognitive Processing Therapy (CPT), structured, evidence-based work for when the past won’t stay in the past.</p></article></div></section><section class="why"><p class="eyebrow">Why TherapyPA</p><h2>Depth and practical help,<br>together.</h2><ul><li><strong>Depth work and practical tools</strong><p>I’m certified in psychodynamic psychotherapy and CBT, and trained in CPT for trauma. We get to what matters, and every session leaves you with something concrete.</p></li><li><strong>A decade where it counts</strong><p>Before private practice, I spent a decade in the victim services field and community behavioral health. That work taught me what it means to sit with people during the worst moments of their lives, and it’s the foundation of how I practice now.</p></li><li><strong>A real relationship, not a protocol</strong><p>This isn’t a six-session program. It’s a therapeutic relationship built over time, aimed at lasting change. Not just symptom management.</p></li><li><strong>Private by design</strong><p>Right now I am private pay, so no insurer ever sees a diagnosis or a treatment note from our work, and nothing goes to an employer. When IBX credentialing clears, private-pay sessions will stay exactly this private.</p></li></ul></section><section id="about" class="about"><p class="eyebrow">About William</p><div><h2>A thoughtful, collaborative<br>space to be yourself.</h2><p>I’m William Curtin, a licensed clinical social worker based in Philadelphia. I work with adults through online therapy in Pennsylvania.</p><p>I hold a Master of Social Work from the University of Pennsylvania and am a Licensed Clinical Social Worker in Pennsylvania (license CW025367, current through February 28, 2027). My experience includes outpatient community mental health, victim services, and group practice work.</p><p>I am trained in both psychodynamic clinical work and Cognitive Behavioral Therapy (CBT). I’m interested in helping you understand yourself on a fundamental level, while attending to the problems you want help with today.</p></div></section><section id="faq" class="faq"><p class="eyebrow">Questions</p><h2>What people<br>usually ask.</h2><div class="qa"><details><summary>What is your psychotherapy fee?</summary><p>For self-pay, it is $200 per session. Payment is by credit or debit card through the secure client portal, or by Venmo. Depending on availability, I may be able to offer a reduced fee based on financial need.</p></details><details><summary>Do you offer a free consultation?</summary><p>Yes. A free 20-minute consultation so we can see if we’re a good fit. We’ll talk about what brings you in, any questions you have, and what working together would look like.</p></details><details><summary>Where and how do sessions happen?</summary><p>All sessions are held online through secure telehealth, for adults located in Pennsylvania.</p></details><details><summary>Do you take insurance?</summary><p>Not yet. I am currently credentialing with Independence Blue Cross (IBX) for in-network therapy. Until credentialing clears, sessions are private pay. I provide superbills (a detailed receipt) you can submit to your insurer for out-of-network reimbursement.</p></details><details><summary>How does a superbill work?</summary><p>You pay me directly. I provide a superbill on request. You submit it to your insurance company. Your insurance may reimburse part of the cost.</p></details><details><summary>How will I know if my insurance takes superbills?</summary><p>You will have to call your insurance company and ask the following questions:</p><ul><li>Do I have out-of-network mental health benefits?</li><li>Is prior authorization required?</li><li>Do I need to pay an annual deductible first?</li><li>What is the reimbursement rate?</li><li>Are there any session limits per year?</li><li>What information is needed on the superbill?</li><li>How do I submit the superbill (online, mail, app)?</li><li>How long does it take to be reimbursed?</li></ul></details><details><summary>Do I need a referral or preauthorization?</summary><p>No. For routine outpatient therapy with IBX plans, no referral or preauthorization is needed. I verify your benefits before we begin so there are no surprises.</p></details><details><summary>What is the first session like?</summary><p>We’ll talk about what brings you in, what you want to be different, and how we might work together. There’s no pressure to have it all figured out. Beginning where you are is the whole point.</p></details><details><summary>What is your cancellation policy?</summary><p>Please give at least 24 hours’ notice if you need to cancel or reschedule. Late cancellations and missed sessions are charged the full fee, except in true emergencies.</p></details></div></section><section id="start" class="start"><p class="eyebrow">Getting started</p><h2>Let’s begin with<br>what brings you here.</h2><p>I offer a free 20-minute consultation so we can see if we’re a good fit. Sessions are held online through secure telehealth, for adults located in Pennsylvania. I am now credentialing with Independence Blue Cross (IBX). If you have an IBX plan and want to be first in line when in-network sessions begin, book a free consultation and mention IBX.</p><a class="button light" href="https://calendly.com/bill-therapypa/20min" target="_blank" rel="noopener">Book your free consultation <span aria-hidden="true">↗</span></a><p class="small">Pick a time that works for you. You’ll get a confirmation right away.</p></section></main><footer><span>TherapyPA · William Curtin, LCSW</span><span>Online therapy in Pennsylvania · Now credentialing with Independence Blue Cross (IBX)</span><nav aria-label="More pages"><a href="/philadelphia/">Online therapy in Philadelphia</a><span aria-hidden="true"> · </span><a href="/bucks-county/">Online therapy in Bucks County</a><span aria-hidden="true"> · </span><a href="/chester-county/">Online therapy in Chester County</a><span aria-hidden="true"> · </span><a href="/delaware-county/">Online therapy in Delaware County</a><span aria-hidden="true"> · </span><a href="/montgomery-county/">Online therapy in Montgomery County</a><span aria-hidden="true"> · </span><a href="/traumatic-grief/">Traumatic grief therapy</a></nav></footer></body></html>
+</script>
+</head>
+<body>
+
+
+
+<!-- Compact sticky header -->
+<div class="compact" id="compact" aria-hidden="true">
+  <div class="row">
+    
+    <div>
+      <div class="cname">William Curtin, LCSW</div>
+      <div class="csub">Philadelphia, PA &nbsp;•&nbsp; <a href="#start">Contact</a></div>
+    </div>
+    <nav>
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#services" data-nav="services">Services</a>
+      <a href="#location" data-nav="location">Location</a>
+      <a class="btn small" href="#start">Book a Consultation</a>
+    </nav>
+  </div>
+</div>
+
+<!-- Main header -->
+<header class="site" id="home">
+  <img class="brandmark" src="assets/logo.jpeg" alt="TherapyPA" />
+  <div class="name">William Curtin, LCSW</div>
+  <div class="contactline">
+    <span>Philadelphia, PA</span><span class="dot">●</span>
+    <span>Virtual therapy across Pennsylvania</span><span class="dot">●</span>
+    <a href="#start"><svg class="mail-ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M4 7.5 12 13l8-5.5"/></svg> Contact</a>
+  </div>
+  <nav class="main" aria-label="Main">
+    <ul>
+      <li><a href="#home" data-nav="home" class="active">Home</a></li>
+      <li><a href="#about" data-nav="about">About</a></li>
+      <li><a href="#services" data-nav="services">Services</a></li>
+      <li><a href="#location" data-nav="location">Location</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>When coping isn’t enough.</h1>
+  <p>Grief that will not settle? Work that looks fine from the outside and feels empty inside? Thoughts that will not quiet down?</p>
+  <p>Therapy is a particular kind of conversation, one that is all about you. You do not need the right words yet. We can start with what is bringing you in.</p>
+  <a class="btn" href="#start">Schedule a Free Consultation</a>
+  <div class="note">Free 20-minute consultation &nbsp;•&nbsp; Virtual across Pennsylvania</div>
+</div>
+
+<!-- Trust badges -->
+<div class="badges">
+  <div class="grid">
+    <div class="badge">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14 a8 8 0 0 1 8-8 h14 a8 8 0 0 1 8 8 v12 a8 8 0 0 1-8 8 H18 l-8 7 v-7 a8 8 0 0 1-4-7 z"/><path d="M19 22.5 29 17.5 v11 L19 23.5z" fill="#546a76" stroke="none"/></svg>
+      <p>Offers Telehealth<br>Appointments</p>
+    </div>
+    <div class="badge">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="12" width="34" height="24" rx="2"/><path d="M7 20 h34"/></svg>
+      <p>Accepts<br>Online Payments</p>
+    </div>
+    <div class="badge">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6 l14 5 v10 c0 10-6 17-14 21 C16 38 10 31 10 21 V11 z"/><path d="M17 24 l5 5 9-11"/></svg>
+      <p>Licensed in<br>Pennsylvania</p>
+    </div>
+    <div class="badge">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="30" rx="2"/><path d="M7 19 h34"/><path d="M16 6 v8"/><path d="M32 6 v8"/><path d="M16 29 h6"/><path d="M26 29 h6"/></svg>
+      <p>Free 20-Minute<br>Consultation</p>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about" id="about">
+  <p class="label">About</p>
+  <h2>Philosophy and Background</h2>
+  <div class="narrow">
+    <p>Hi, I’m Bill. I’m a Licensed Clinical Social Worker in Pennsylvania, and TherapyPA is my solo virtual practice. I work with adults whose lives look steady from the outside while something underneath is not: grief that has not loosened its grip, anxiety that keeps the mind running, and the particular exhaustion of people who are used to holding it together for everyone else.</p>
+    <p>My approach is unhurried and conversational. Patterns we carry, in how we grieve, work, and relate to the people closest to us, were usually learned early and for good reasons. They run quietly, though, and they shape choices long after the reasons have changed. In therapy we slow down enough to notice those patterns, understand where they came from, and loosen the ones that no longer serve you.</p>
+    <p>Self-understanding is not the end goal. The aim is to put it to work: grieving without getting stuck in it, working without burning out, and being in your relationships in ways that feel more honest and more sustainable.</p>
+    <p>I am licensed in Pennsylvania, and all sessions are held by secure video. My practice focuses on the five-county Philadelphia area: Philadelphia, Bucks, Chester, Delaware, and Montgomery counties.</p>
+    <p>On a personal note, I am a lifelong Philadelphian and a runner. I live here with my family, and most weekends you can find me on one of the city’s running routes with a camera in hand.</p>
+  </div>
+  <div class="portrait">
+    <img class="headshot" src="assets/portrait.jpeg" alt="Headshot of William Curtin, LCSW" width="172" height="172" />
+    <div class="pname">William Curtin, LCSW</div>
+    <div class="pcred">Licensed Clinical Social Worker, Pennsylvania</div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="tags" role="group" aria-label="Specialties: select one to read more">
+    <button class="tag" data-spec="grief" aria-pressed="false">Grief / Loss</button>
+    <button class="tag" data-spec="anxiety" aria-pressed="false">Anxiety</button>
+    <button class="tag" data-spec="trauma" aria-pressed="false">Traumatic Grief</button>
+    <button class="tag" data-spec="burnout" aria-pressed="false">High-Achiever Burnout</button>
+    <button class="tag" data-spec="men" aria-pressed="false">Men’s Mental Health</button>
+    <button class="tag" data-spec="responders" aria-pressed="false">First Responders</button>
+    <button class="tag" data-spec="transitions" aria-pressed="false">Life Transitions</button>
+    <button class="tag" data-spec="depression" aria-pressed="false">Depression</button>
+  </div>
+  <div class="spec-panel" id="specPanel" hidden></div>
+  <div class="approaches">
+    <p class="label">Approaches</p>
+    <ul>
+      <li>Psychodynamic Psychotherapy</li>
+      <li>Insight-Oriented Therapy</li>
+      <li>Cognitive Processing Therapy (CPT)</li>
+      <li>Grief-Focused Therapy</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="location" id="location">
+  <p class="label">Location</p>
+  <h2>Virtual in Pennsylvania</h2>
+  <p class="narrow" style="font-size:17.5px;line-height:1.7">TherapyPA is a virtual-only practice. There is no office to find and no buzzer to press: sessions happen by secure video, from wherever in Pennsylvania you are most comfortable talking.</p>
+  <div class="loc-grid">
+    <div class="loc-card">
+      <h3>Where I work</h3>
+      <p><strong>TherapyPA</strong><br>Philadelphia, Pennsylvania</p>
+      <p>Home ground is the five-county Philadelphia area:</p>
+      <div class="counties"><a href="/philadelphia/">Philadelphia</a><a href="/bucks-county/">Bucks</a><a href="/chester-county/">Chester</a><a href="/delaware-county/">Delaware</a><a href="/montgomery-county/">Montgomery</a></div>
+    </div>
+    <div class="loc-card">
+      <h3>How sessions work</h3>
+      <p>All appointments are held by secure video for clients located in Pennsylvania at the time of session.</p>
+      <p>Scheduling, forms, and payments run through a secure client portal, so everything lives in one place.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Getting started -->
+<section class="start" id="start">
+  <p class="label">Getting Started</p>
+  <h2 style="font-size:clamp(30px,4.2vw,42px);margin-bottom:22px">Start with a conversation</h2>
+  <p>Start with a free 20-minute consultation, by video or phone, for adults in Pennsylvania. It is a chance to talk through what you are dealing with and see whether we would be a good fit.</p>
+  <p>Reaching out does not commit you to anything. Pick a time below that works for you.</p>
+
+  <div class="calendly-wrap">
+    <div class="cal-bar">
+      <span class="cal-bar-text"><strong>Free 20-minute consultation.</strong> Pick a time in the calendar below, or open the scheduler in its own window.</span>
+      <a class="btn small" href="https://calendly.com/bill-therapypa/20min" target="_blank" rel="noopener">Open Scheduler</a>
+    </div>
+    <!-- Calendly direct iframe embed: Free 20min Consultation — calendly.com/bill-therapypa/20min.
+         Direct iframe (not the widget.js script embed): the script-built frame is blocked in
+         some browsers/preview frames ("This content is blocked"). The script below points
+         embed_domain at the host actually serving this page, as Calendly's embed requires. -->
+    <iframe class="cal-frame" id="calFrame" src="https://calendly.com/bill-therapypa/20min?embed_domain=therapypa.com&amp;embed_type=Inline&amp;hide_gdpr_banner=1&amp;primary_color=2e7d64" title="Schedule a free 20-minute consultation with William Curtin, LCSW"></iframe>
+  </div>
+
+  <p class="ibx-note">TherapyPA is a private-pay practice. Independence Blue Cross (IBX) credentialing is in progress.</p>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>William Curtin, LCSW</h4>
+      <p><a href="https://therapypa.com">therapypa.com</a> &nbsp;|&nbsp; <a href="#start">✉ Contact</a></p>
+      <p>Philadelphia, PA</p>
+      <p>Virtual therapy in Pennsylvania for grief, anxiety, and high-achiever burnout.</p>
+    </div>
+    <div class="divider" aria-hidden="true"></div>
+    <div>
+      <h4>Practice</h4>
+      <p>Virtual only, Pennsylvania</p>
+      <p><a href="#start">Book a free 20-minute consultation</a></p>
+      <p>Private-pay. Superbills provided on request.</p>
+    </div>
+  </div>
+  <p class="emergency">This site is not to be used for emergency situations. If you or others are in immediate danger or experiencing a medical emergency, call 911 immediately.</p>
+</footer>
+
+<script>
+(function(){
+  var calFrame = document.getElementById('calFrame');
+  if (calFrame && window.location.hostname){
+    calFrame.src = 'https://calendly.com/bill-therapypa/20min?embed_domain=' + encodeURIComponent(window.location.hostname) + '&embed_type=Inline&hide_gdpr_banner=1&primary_color=2e7d64';
+  }
+
+  var compact = document.getElementById('compact');
+  function onScroll(){ compact.classList.toggle('show', window.scrollY > 430); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  var specs = {
+    grief: "Grief does not follow a schedule, and it does not always look like sadness. We make room for the loss itself, and for everything it has rearranged, at a pace that respects how much it mattered.",
+    anxiety: "Anxiety often shows up as a mind that will not quiet down: rehearsing, bracing, replaying. Together we look at what the worry is protecting, and build ways of living that are not organized around it.",
+    trauma: "When a death is sudden or traumatic, grief and trauma arrive together and can block each other. My work here draws on Cognitive Processing Therapy (CPT) alongside grief-focused care, so both get attention.",
+    burnout: "For people who perform well and feel empty doing it. We look honestly at what the striving costs, what it has been for, and what a sustainable version of your ambition could look like.",
+    men: "Many men were taught to handle things alone and quietly. Therapy here is a place to set that rule down, without judgment, and talk about grief, stress, identity, and relationships plainly.",
+    responders: "First responders carry what they have seen into every part of life. This is a confidential space, separate from work, to process the calls that stay with you and the strain that builds over a career.",
+    transitions: "Divorce, a career change, kids leaving, retirement on the horizon. Transitions stir up old patterns precisely when life demands new ones. Therapy helps you move through deliberately rather than just getting through.",
+    depression: "Depression can look like flatness, irritability, or simply going through the motions. We work to understand what is underneath it and to rebuild energy, connection, and a sense of direction."
+  };
+  var panel = document.getElementById('specPanel');
+  var tags = Array.prototype.slice.call(document.querySelectorAll('.tag'));
+  tags.forEach(function(tag){
+    tag.addEventListener('click', function(){
+      var key = tag.getAttribute('data-spec');
+      var wasActive = tag.getAttribute('aria-pressed') === 'true';
+      tags.forEach(function(t){ t.setAttribute('aria-pressed','false'); });
+      if (wasActive){ panel.hidden = true; panel.textContent = ''; return; }
+      tag.setAttribute('aria-pressed','true');
+      panel.textContent = specs[key];
+      panel.hidden = false;
+    });
+  });
+
+  var map = {home:document.getElementById('home'), about:document.getElementById('about'), services:document.getElementById('services'), location:document.getElementById('location')};
+  var links = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
+  function setActive(key){ links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-nav') === key); }); }
+  if ('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ for (var k in map){ if (map[k] === e.target) setActive(k); } } });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    for (var k in map) obs.observe(map[k]);
+  }
+})();
+</script>
+</body>
+</html>
