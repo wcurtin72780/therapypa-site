@@ -141,6 +141,12 @@
 
   /* Getting started */
   .start{padding:88px 24px 76px;text-align:center}
+  .faq{background:var(--paper);padding:84px 24px 88px;text-align:center}
+  .faq-list{max-width:760px;margin:44px auto 0;text-align:left}
+  .faq-item{border-top:1px solid var(--line);padding:22px 4px}
+  .faq-item:last-child{border-bottom:1px solid var(--line)}
+  .faq-item h3{font-size:19.5px;margin-bottom:8px}
+  .faq-item p{margin:0;font-size:16.5px;line-height:1.65}
   .start p{max-width:600px;margin:0 auto 8px;font-size:17.5px;line-height:1.7}
   .start .btn{margin-top:30px;min-width:300px}
   .calendly-wrap{max-width:860px;margin:38px auto 0;border:1px solid var(--line);background:#fff;box-shadow:0 10px 34px rgba(38,49,47,.07);overflow:hidden}
@@ -226,6 +232,84 @@
         "https://www.linkedin.com/in/william-curtin-lcsw/",
         "https://www.therapyden.com/therapist/william-curtin"
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://therapypa.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is your psychotherapy fee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For self-pay, it is $200 per session. Payment is by credit or debit card through the secure client portal, or by Venmo. Depending on availability, I may be able to offer a reduced fee based on financial need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer a free consultation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A free 20-minute consultation so we can see if we’re a good fit. We’ll talk about what brings you in, any questions you have, and what working together would look like."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where and how do sessions happen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All sessions are held online through secure telehealth, for adults located in Pennsylvania."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you take insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet. I am currently credentialing with Independence Blue Cross (IBX) for in-network therapy. Until credentialing clears, sessions are private pay. I provide superbills (a detailed receipt) you can submit to your insurer for out-of-network reimbursement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does a superbill work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You pay me directly. I provide a superbill on request. You submit it to your insurance company. Your insurance may reimburse part of the cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How will I know if my insurance takes superbills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You will have to call your insurance company and ask the following questions: Do I have out-of-network mental health benefits? Is prior authorization required? Do I need to pay an annual deductible first? What is the reimbursement rate? Are there any session limits per year? What information is needed on the superbill? How do I submit the superbill (online, mail, app)? How long does it take to be reimbursed?"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a referral or preauthorization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. For private-pay therapy, no referral or preauthorization is needed. If you plan to use out-of-network benefits, your insurer may have its own requirements, so it is worth a quick call to them first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the first session like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We’ll talk about what brings you in, what you want to be different, and how we might work together. There’s no pressure to have it all figured out. Beginning where you are is the whole point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your cancellation policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please give at least 24 hours’ notice if you need to cancel or reschedule. Late cancellations and missed sessions are charged the full fee, except in true emergencies."
+          }
+        }
+      ]
     }
   ]
 }
@@ -248,6 +332,7 @@
       <a href="#about" data-nav="about">About</a>
       <a href="#services" data-nav="services">Services</a>
       <a href="#location" data-nav="location">Location</a>
+      <a href="#faq" data-nav="faq">FAQ</a>
       <a class="btn small" href="#start">Book a Consultation</a>
     </nav>
   </div>
@@ -268,6 +353,7 @@
       <li><a href="#about" data-nav="about">About</a></li>
       <li><a href="#services" data-nav="services">Services</a></li>
       <li><a href="#location" data-nav="location">Location</a></li>
+      <li><a href="#faq" data-nav="faq">FAQ</a></li>
     </ul>
   </nav>
 </header>
@@ -362,6 +448,23 @@
       <p>All appointments are held by secure video for clients located in Pennsylvania at the time of session.</p>
       <p>Scheduling, forms, and payments run through a secure client portal, so everything lives in one place.</p>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <p class="label">Questions</p>
+  <h2 style="font-size:clamp(30px,4.2vw,42px)">Frequently asked questions</h2>
+  <div class="faq-list">
+    <div class="faq-item"><h3>What is your psychotherapy fee?</h3><p>For self-pay, it is $200 per session. Payment is by credit or debit card through the secure client portal, or by Venmo. Depending on availability, I may be able to offer a reduced fee based on financial need.</p></div>
+    <div class="faq-item"><h3>Do you offer a free consultation?</h3><p>Yes. A free 20-minute consultation so we can see if we’re a good fit. We’ll talk about what brings you in, any questions you have, and what working together would look like.</p></div>
+    <div class="faq-item"><h3>Where and how do sessions happen?</h3><p>All sessions are held online through secure telehealth, for adults located in Pennsylvania.</p></div>
+    <div class="faq-item"><h3>Do you take insurance?</h3><p>Not yet. I am currently credentialing with Independence Blue Cross (IBX) for in-network therapy. Until credentialing clears, sessions are private pay. I provide superbills (a detailed receipt) you can submit to your insurer for out-of-network reimbursement.</p></div>
+    <div class="faq-item"><h3>How does a superbill work?</h3><p>You pay me directly. I provide a superbill on request. You submit it to your insurance company. Your insurance may reimburse part of the cost.</p></div>
+    <div class="faq-item"><h3>How will I know if my insurance takes superbills?</h3><p>You will have to call your insurance company and ask the following questions: Do I have out-of-network mental health benefits? Is prior authorization required? Do I need to pay an annual deductible first? What is the reimbursement rate? Are there any session limits per year? What information is needed on the superbill? How do I submit the superbill (online, mail, app)? How long does it take to be reimbursed?</p></div>
+    <div class="faq-item"><h3>Do I need a referral or preauthorization?</h3><p>No. For private-pay therapy, no referral or preauthorization is needed. If you plan to use out-of-network benefits, your insurer may have its own requirements, so it is worth a quick call to them first.</p></div>
+    <div class="faq-item"><h3>What is the first session like?</h3><p>We’ll talk about what brings you in, what you want to be different, and how we might work together. There’s no pressure to have it all figured out. Beginning where you are is the whole point.</p></div>
+    <div class="faq-item"><h3>What is your cancellation policy?</h3><p>Please give at least 24 hours’ notice if you need to cancel or reschedule. Late cancellations and missed sessions are charged the full fee, except in true emergencies.</p></div>
   </div>
 </section>
 
