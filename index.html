@@ -27,17 +27,17 @@
   :root{
     --green:#2e7d64;
     --green-dark:#256552;
-    --green-hero:#3f9e78;
+    --green-hero:#2b7260;
     --slate:#546a76;
     --slate-dark:#43565f;
     --slate-deep:#3d4f57;
     --ink:#26312f;
     --body:#3d4a47;
-    --muted:#6e7f7a;
+    --muted:#64766f;
     --line:#e3e8e5;
     --paper:#ffffff;
     --wash:#f3f6f4;
-    --chip:#6b828d;
+    --chip:#5f7683;
     --serif:"Lora", Georgia, "Times New Roman", serif;
     --sans:"Source Sans 3", "Helvetica Neue", Arial, sans-serif;
   }
@@ -73,8 +73,8 @@
   nav.main a.active{color:var(--green);border-bottom-color:var(--green)}
 
   /* Compact sticky header (appears on scroll, like Fraser's inner pages) */
-  .compact{position:fixed;inset:0 0 auto 0;background:var(--paper);box-shadow:0 1px 0 var(--line),0 6px 18px rgba(38,49,47,.06);z-index:50;transform:translateY(-110%);transition:transform .25s ease}
-  .compact.show{transform:translateY(0)}
+  .compact{position:fixed;inset:0 0 auto 0;background:var(--paper);box-shadow:0 1px 0 var(--line),0 6px 18px rgba(38,49,47,.06);z-index:50;transform:translateY(-110%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
+  .compact.show{transform:translateY(0);visibility:visible;transition:transform .25s ease}
   .compact .row{max-width:1180px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:16px}
   .compact .chairs{width:52px;margin:0}
   .compact .cname{font-family:var(--serif);font-size:19px;color:var(--ink);line-height:1.15}
@@ -105,25 +105,25 @@
 
   /* Sections */
   section{scroll-margin-top:96px}
-  .label{text-align:center;text-transform:uppercase;letter-spacing:.22em;font-size:12.5px;font-weight:700;color:#a3b3ad;margin:0 0 14px}
+  .label{text-align:center;text-transform:uppercase;letter-spacing:.22em;font-size:12.5px;font-weight:700;color:#5a6f64;margin:0 0 14px}
   .about{padding:84px 0 90px}
   .about h2,.location h2{font-size:clamp(32px,4.6vw,48px);text-align:center;line-height:1.2;margin-bottom:34px}
   .about .narrow p{font-size:17.5px;line-height:1.75;margin:0 0 22px}
   .portrait{margin:52px auto 0;text-align:center}
   .headshot{width:172px;height:172px;border-radius:50%;margin:0 auto 16px;display:block;object-fit:cover;object-position:50% 18%;border:3px solid #fff;box-shadow:0 0 0 1px var(--line),0 10px 28px rgba(38,49,47,.14);background:var(--wash)}
   .portrait .pname{font-size:17px;color:var(--ink)}
-  .portrait .pcred{color:#7d9b91;font-size:15.5px;margin-top:2px}
+  .portrait .pcred{color:#4f7266;font-size:15.5px;margin-top:2px}
 
   /* Services — slate block */
-  .services{background:var(--slate);color:#e8eef0;padding:26px 24px 84px;text-align:center}
+  .services{background:var(--slate);color:#e8eef0;padding:72px 24px 84px;text-align:center}
   .tags{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:880px;margin:0 auto 58px}
   .tag{background:var(--chip);color:#fff;border:0;font-family:var(--sans);font-size:16.5px;padding:9px 26px;cursor:pointer;transition:background .15s ease}
-  .tag:hover{background:#7d97a2}
+  .tag:hover{background:#6b828d}
   .tag[aria-pressed="true"]{background:#fff;color:var(--slate-dark);font-weight:700}
   .spec-panel{max-width:620px;margin:-34px auto 54px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:22px 28px;font-size:16.5px;line-height:1.65;color:#eef3f4}
   .spec-panel[hidden]{display:none}
-  .services .label{color:#b9c8cd;text-align:left}
-  .approaches{max-width:400px;margin:0 auto;text-align:left}
+  .services .label{color:#e8eef0;text-align:left}
+  .approaches{max-width:560px;margin:0 auto;text-align:left}
   .approaches h3{color:#fff;font-family:var(--sans);font-weight:400}
   .approaches ul{list-style:none;margin:18px 0 0;padding:0}
   .approaches li{font-size:18.5px;padding:7px 0;color:#f2f6f7}
@@ -156,17 +156,30 @@
   .cal-bar .btn{white-space:nowrap}
   .cal-frame{display:block;width:100%;height:700px;border:0;background:#fff}
   @media(max-width:700px){.cal-frame{height:760px}.cal-bar{justify-content:center;text-align:center}}
-  .ibx-note{margin:34px auto 0;font-size:13.5px;line-height:1.6;color:#8a9a94;max-width:560px}
+  .ibx-note{margin:34px auto 0;font-size:13.5px;line-height:1.6;color:#5c6f68;max-width:560px}
 
   /* Footer */
-  footer{background:var(--slate);color:#d7e0e3;padding:64px 24px 34px}
+  footer{background:var(--slate);color:#e8eef0;padding:64px 24px 34px}
   .foot-grid{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1px 1fr;gap:40px}
   @media(max-width:700px){.foot-grid{grid-template-columns:1fr}.foot-grid .divider{display:none}}
   .foot-grid .divider{background:rgba(255,255,255,.25)}
   footer h4{margin:0 0 12px;color:#fff;font-size:16.5px;font-family:var(--sans)}
   footer p{margin:0 0 8px;font-size:15.5px}
   footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
-  .emergency{max-width:1060px;margin:52px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);text-align:center;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:#b9c8cd;line-height:1.7}
+  .emergency{max-width:1060px;margin:52px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);text-align:center;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:#e8eef0;line-height:1.7}
+  .skip{position:absolute;left:16px;top:-64px;z-index:100;background:var(--ink);color:#fff;padding:10px 18px;font-weight:600}
+  .skip:focus{top:12px;text-decoration:none}
+  :focus-visible{outline:2px solid var(--green-dark);outline-offset:2px}
+  .hero :focus-visible,.services :focus-visible,.compact :focus-visible,footer :focus-visible{outline-color:#fff}
+  .services h2{color:#fff;font-size:clamp(30px,4.2vw,42px);text-align:center;margin:0 0 34px}
+  .services .shead .label{text-align:center}
+  .spec-panel a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  .approaches .label{text-align:center}
+  .faq-item ul{margin:10px 0 0;padding-left:22px}
+  .faq-item li{font-size:16.5px;line-height:1.6;margin:5px 0}
+  .foot-links{max-width:1060px;margin:36px auto 0;text-align:center;font-size:14.5px;line-height:2}
+  .foot-links .sep{color:rgba(255,255,255,.4);margin:0 8px}
+  @media(max-width:700px){nav.main ul{gap:16px;flex-wrap:wrap}nav.main a{font-size:15px;padding:8px 2px 10px}}
 </style>
 <script type="application/ld+json">
 {
@@ -250,7 +263,7 @@
           "name": "Do you offer a free consultation?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. A free 20-minute consultation so we can see if we’re a good fit. We’ll talk about what brings you in, any questions you have, and what working together would look like."
+            "text": "Yes. I offer a free 20-minute consultation so we can see if we’re a good fit. We’ll talk about what brings you in, any questions you have, and what working together would look like."
           }
         },
         {
@@ -314,13 +327,15 @@
   ]
 }
 </script>
+<noscript><style>.spec-desc[hidden]{display:block !important}.spec-panel[hidden]{display:block !important}</style></noscript>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 
 
 <!-- Compact sticky header -->
-<div class="compact" id="compact" aria-hidden="true">
+<div class="compact" id="compact">
   <div class="row">
     
     <div>
@@ -340,7 +355,7 @@
 
 <!-- Main header -->
 <header class="site" id="home">
-  <img class="brandmark" src="assets/logo.svg" alt="TherapyPA" />
+  <img class="brandmark" src="assets/logo.svg" alt="TherapyPA" width="240" height="84" />
   <div class="name">William Curtin, LCSW</div>
   <div class="contactline">
     <span>Philadelphia, PA</span><span class="dot">●</span>
@@ -357,6 +372,8 @@
     </ul>
   </nav>
 </header>
+
+<main id="main">
 
 <!-- Hero -->
 <div class="hero">
@@ -398,10 +415,11 @@
     <p>My approach is unhurried and conversational. Patterns we carry, in how we grieve, work, and relate to the people closest to us, were usually learned early and for good reasons. They run quietly, though, and they shape choices long after the reasons have changed. In therapy we slow down enough to notice those patterns, understand where they came from, and loosen the ones that no longer serve you.</p>
     <p>Self-understanding is not the end goal. The aim is to put it to work: grieving without getting stuck in it, working without burning out, and being in your relationships in ways that feel more honest and more sustainable.</p>
     <p>I am licensed in Pennsylvania, and all sessions are held by secure video. My practice focuses on the five-county Philadelphia area: Philadelphia, Bucks, Chester, Delaware, and Montgomery counties.</p>
+    <p>I hold a Master of Social Work from the University of Pennsylvania and am a Licensed Clinical Social Worker in Pennsylvania (license CW025367, current through February 28, 2027). Before private practice, I spent a decade in the victim services field and community behavioral health. I am certified in psychodynamic psychotherapy and Cognitive Behavioral Therapy (CBT), and trained in Cognitive Processing Therapy (CPT) for trauma.</p>
     <p>On a personal note, I am a lifelong Philadelphian and a runner. I live here with my family, and most weekends you can find me on one of the city’s running routes with a camera in hand.</p>
   </div>
   <div class="portrait">
-    <img class="headshot" src="assets/portrait.jpeg" alt="Headshot of William Curtin, LCSW" width="172" height="172" />
+    <img class="headshot" src="assets/portrait-sm.svg" alt="Headshot of William Curtin, LCSW" width="172" height="172" />
     <div class="pname">William Curtin, LCSW</div>
     <div class="pcred">Licensed Clinical Social Worker, Pennsylvania</div>
   </div>
@@ -409,8 +427,9 @@
 
 <!-- Services -->
 <section class="services" id="services">
+  <div class="shead"><p class="label">Services</p><h2>Specialties</h2></div>
   <div class="tags" role="group" aria-label="Specialties: select one to read more">
-    <button class="tag" data-spec="grief" aria-pressed="false">Grief / Loss</button>
+    <button class="tag" data-spec="grief" aria-pressed="true">Grief / Loss</button>
     <button class="tag" data-spec="anxiety" aria-pressed="false">Anxiety</button>
     <button class="tag" data-spec="trauma" aria-pressed="false">Traumatic Grief</button>
     <button class="tag" data-spec="burnout" aria-pressed="false">High-Achiever Burnout</button>
@@ -419,7 +438,16 @@
     <button class="tag" data-spec="transitions" aria-pressed="false">Life Transitions</button>
     <button class="tag" data-spec="depression" aria-pressed="false">Depression</button>
   </div>
-  <div class="spec-panel" id="specPanel" hidden></div>
+  <div class="spec-panel" id="specPanel">
+    <div class="spec-desc" data-desc="grief">Grief does not follow a schedule, and it does not always look like sadness. We make room for the loss itself, and for everything it has rearranged, at a pace that respects how much it mattered.</div>
+    <div class="spec-desc" data-desc="anxiety" hidden>Anxiety often shows up as a mind that will not quiet down: rehearsing, bracing, replaying. Together we look at what the worry is protecting, and build ways of living that are not organized around it.</div>
+    <div class="spec-desc" data-desc="trauma" hidden>When a death is sudden or traumatic, grief and trauma arrive together and can block each other. My work here draws on Cognitive Processing Therapy (CPT) alongside grief-focused care, so both get attention. <a href="/traumatic-grief/">More about traumatic grief therapy</a></div>
+    <div class="spec-desc" data-desc="burnout" hidden>For people who perform well and feel empty doing it. We look honestly at what the striving costs, what it has been for, and what a sustainable version of your ambition could look like.</div>
+    <div class="spec-desc" data-desc="men" hidden>Many men were taught to handle things alone and quietly. Therapy here is a place to set that rule down, without judgment, and talk about grief, stress, identity, and relationships plainly.</div>
+    <div class="spec-desc" data-desc="responders" hidden>First responders carry what they have seen into every part of life. This is a confidential space, separate from work, to process the calls that stay with you and the strain that builds over a career.</div>
+    <div class="spec-desc" data-desc="transitions" hidden>Divorce, a career change, kids leaving, retirement on the horizon. Transitions stir up old patterns precisely when life demands new ones. Therapy helps you move through deliberately rather than just getting through.</div>
+    <div class="spec-desc" data-desc="depression" hidden>Depression can look like flatness, irritability, or simply going through the motions. We work to understand what is underneath it and to rebuild energy, connection, and a sense of direction.</div>
+  </div>
   <div class="approaches">
     <p class="label">Approaches</p>
     <ul>
@@ -457,11 +485,11 @@
   <h2 style="font-size:clamp(30px,4.2vw,42px)">Frequently asked questions</h2>
   <div class="faq-list">
     <div class="faq-item"><h3>What is your psychotherapy fee?</h3><p>For self-pay, it is $200 per session. Payment is by credit or debit card through the secure client portal, or by Venmo. Depending on availability, I may be able to offer a reduced fee based on financial need.</p></div>
-    <div class="faq-item"><h3>Do you offer a free consultation?</h3><p>Yes. A free 20-minute consultation so we can see if we’re a good fit. We’ll talk about what brings you in, any questions you have, and what working together would look like.</p></div>
+    <div class="faq-item"><h3>Do you offer a free consultation?</h3><p>Yes. I offer a free 20-minute consultation so we can see if we’re a good fit. We’ll talk about what brings you in, any questions you have, and what working together would look like.</p></div>
     <div class="faq-item"><h3>Where and how do sessions happen?</h3><p>All sessions are held online through secure telehealth, for adults located in Pennsylvania.</p></div>
     <div class="faq-item"><h3>Do you take insurance?</h3><p>Not yet. I am currently credentialing with Independence Blue Cross (IBX) for in-network therapy. Until credentialing clears, sessions are private pay. I provide superbills (a detailed receipt) you can submit to your insurer for out-of-network reimbursement.</p></div>
     <div class="faq-item"><h3>How does a superbill work?</h3><p>You pay me directly. I provide a superbill on request. You submit it to your insurance company. Your insurance may reimburse part of the cost.</p></div>
-    <div class="faq-item"><h3>How will I know if my insurance takes superbills?</h3><p>You will have to call your insurance company and ask the following questions: Do I have out-of-network mental health benefits? Is prior authorization required? Do I need to pay an annual deductible first? What is the reimbursement rate? Are there any session limits per year? What information is needed on the superbill? How do I submit the superbill (online, mail, app)? How long does it take to be reimbursed?</p></div>
+    <div class="faq-item"><h3>How will I know if my insurance takes superbills?</h3><p>You will have to call your insurance company and ask the following questions:</p><ul><li>Do I have out-of-network mental health benefits?</li><li>Is prior authorization required?</li><li>Do I need to pay an annual deductible first?</li><li>What is the reimbursement rate?</li><li>Are there any session limits per year?</li><li>What information is needed on the superbill?</li><li>How do I submit the superbill (online, mail, app)?</li><li>How long does it take to be reimbursed?</li></ul></div>
     <div class="faq-item"><h3>Do I need a referral or preauthorization?</h3><p>No. For private-pay therapy, no referral or preauthorization is needed. If you plan to use out-of-network benefits, your insurer may have its own requirements, so it is worth a quick call to them first.</p></div>
     <div class="faq-item"><h3>What is the first session like?</h3><p>We’ll talk about what brings you in, what you want to be different, and how we might work together. There’s no pressure to have it all figured out. Beginning where you are is the whole point.</p></div>
     <div class="faq-item"><h3>What is your cancellation policy?</h3><p>Please give at least 24 hours’ notice if you need to cancel or reschedule. Late cancellations and missed sessions are charged the full fee, except in true emergencies.</p></div>
@@ -477,18 +505,19 @@
 
   <div class="calendly-wrap">
     <div class="cal-bar">
-      <span class="cal-bar-text"><strong>Free 20-minute consultation.</strong> Pick a time in the calendar below, or open the scheduler in its own window.</span>
+      <span class="cal-bar-text"><strong>Free 20-minute consultation.</strong> Consults are offered on Tuesdays. Pick a time in the calendar below, or open the scheduler in its own window.</span>
       <a class="btn small" href="https://calendly.com/bill-therapypa/20min" target="_blank" rel="noopener">Open Scheduler</a>
     </div>
     <!-- Calendly direct iframe embed: Free 20min Consultation — calendly.com/bill-therapypa/20min.
          Direct iframe (not the widget.js script embed): the script-built frame is blocked in
          some browsers/preview frames ("This content is blocked"). The script below points
          embed_domain at the host actually serving this page, as Calendly's embed requires. -->
-    <iframe class="cal-frame" id="calFrame" src="https://calendly.com/bill-therapypa/20min?embed_domain=therapypa.com&amp;embed_type=Inline&amp;hide_gdpr_banner=1&amp;primary_color=2e7d64" title="Schedule a free 20-minute consultation with William Curtin, LCSW"></iframe>
+    <iframe class="cal-frame" id="calFrame" loading="lazy" src="https://calendly.com/bill-therapypa/20min?embed_domain=therapypa.com&amp;embed_type=Inline&amp;hide_gdpr_banner=1&amp;primary_color=2e7d64" title="Schedule a free 20-minute consultation with William Curtin, LCSW"></iframe>
   </div>
 
   <p class="ibx-note">TherapyPA is a private-pay practice. Independence Blue Cross (IBX) credentialing is in progress.</p>
 </section>
+</main>
 
 <footer>
   <div class="foot-grid">
@@ -506,45 +535,35 @@
       <p>Private-pay. Superbills provided on request.</p>
     </div>
   </div>
+  <div class="foot-links"><a href="/philadelphia/">Online therapy in Philadelphia</a><span class="sep">·</span><a href="/bucks-county/">Online therapy in Bucks County</a><span class="sep">·</span><a href="/chester-county/">Online therapy in Chester County</a><span class="sep">·</span><a href="/delaware-county/">Online therapy in Delaware County</a><span class="sep">·</span><a href="/montgomery-county/">Online therapy in Montgomery County</a><span class="sep">·</span><a href="/traumatic-grief/">Traumatic grief therapy</a></div>
   <p class="emergency">This site is not to be used for emergency situations. If you or others are in immediate danger or experiencing a medical emergency, call 911 immediately.</p>
 </footer>
 
 <script>
 (function(){
-  var calFrame = document.getElementById('calFrame');
-  if (calFrame && window.location.hostname){
-    calFrame.src = 'https://calendly.com/bill-therapypa/20min?embed_domain=' + encodeURIComponent(window.location.hostname) + '&embed_type=Inline&hide_gdpr_banner=1&primary_color=2e7d64';
-  }
+  // Calendly frame: embed_domain is set to therapypa.com in the iframe src, and the frame lazy-loads.
 
   var compact = document.getElementById('compact');
   function onScroll(){ compact.classList.toggle('show', window.scrollY > 430); }
   window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
-  var specs = {
-    grief: "Grief does not follow a schedule, and it does not always look like sadness. We make room for the loss itself, and for everything it has rearranged, at a pace that respects how much it mattered.",
-    anxiety: "Anxiety often shows up as a mind that will not quiet down: rehearsing, bracing, replaying. Together we look at what the worry is protecting, and build ways of living that are not organized around it.",
-    trauma: "When a death is sudden or traumatic, grief and trauma arrive together and can block each other. My work here draws on Cognitive Processing Therapy (CPT) alongside grief-focused care, so both get attention.",
-    burnout: "For people who perform well and feel empty doing it. We look honestly at what the striving costs, what it has been for, and what a sustainable version of your ambition could look like.",
-    men: "Many men were taught to handle things alone and quietly. Therapy here is a place to set that rule down, without judgment, and talk about grief, stress, identity, and relationships plainly.",
-    responders: "First responders carry what they have seen into every part of life. This is a confidential space, separate from work, to process the calls that stay with you and the strain that builds over a career.",
-    transitions: "Divorce, a career change, kids leaving, retirement on the horizon. Transitions stir up old patterns precisely when life demands new ones. Therapy helps you move through deliberately rather than just getting through.",
-    depression: "Depression can look like flatness, irritability, or simply going through the motions. We work to understand what is underneath it and to rebuild energy, connection, and a sense of direction."
-  };
   var panel = document.getElementById('specPanel');
   var tags = Array.prototype.slice.call(document.querySelectorAll('.tag'));
+  var descs = {};
+  Array.prototype.forEach.call(panel.querySelectorAll('.spec-desc'), function(d){ descs[d.getAttribute('data-desc')] = d; });
   tags.forEach(function(tag){
     tag.addEventListener('click', function(){
       var key = tag.getAttribute('data-spec');
       var wasActive = tag.getAttribute('aria-pressed') === 'true';
       tags.forEach(function(t){ t.setAttribute('aria-pressed','false'); });
-      if (wasActive){ panel.hidden = true; panel.textContent = ''; return; }
+      if (wasActive){ for (var k in descs){ descs[k].hidden = true; } panel.hidden = true; return; }
       tag.setAttribute('aria-pressed','true');
-      panel.textContent = specs[key];
+      for (var k2 in descs){ descs[k2].hidden = (k2 !== key); }
       panel.hidden = false;
     });
   });
 
-  var map = {home:document.getElementById('home'), about:document.getElementById('about'), services:document.getElementById('services'), location:document.getElementById('location')};
+  var map = {home:document.getElementById('home'), about:document.getElementById('about'), services:document.getElementById('services'), location:document.getElementById('location'), faq:document.getElementById('faq'), start:document.getElementById('start')};
   var links = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
   function setActive(key){ links.forEach(function(l){ l.classList.toggle('active', l.getAttribute('data-nav') === key); }); }
   if ('IntersectionObserver' in window){
